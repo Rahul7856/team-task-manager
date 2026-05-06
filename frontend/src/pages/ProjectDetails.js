@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projectAPI, taskAPI } from '../api/api';
 import '../styles/project.css';
@@ -18,13 +18,7 @@ export const ProjectDetails = () => {
     priority: 'medium',
     dueDate: '',
   });
-  const [newMemberEmail, setNewMemberEmail] = useState('');
-
-  useEffect(() => {
-    fetchProjectData();
-  }, [projectId]);
-
-  const fetchProjectData = async () => {
+  const fetchProjectData = useCallback(async () => {
     try {
       setLoading(true);
       const [projectData, tasksData] = await Promise.all([
@@ -39,7 +33,11 @@ export const ProjectDetails = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [projectId]);
+
+  useEffect(() => {
+    fetchProjectData();
+  }, [fetchProjectData]);
 
   const handleAddTask = async (e) => {
     e.preventDefault();
