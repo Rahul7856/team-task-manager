@@ -1,0 +1,58 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #222;
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand h1 {
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.navbar-brand h1:hover {
+  color: #0066cc;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.user-info {
+  font-size: 14px;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #333;
+  color: #0066cc;
+}
+
+.nav-link.logout {
+  background-color: #cc0000;
+}
+
+.nav-link.logout:hover {
+  background-color: #990000;
+  color: white;
+}

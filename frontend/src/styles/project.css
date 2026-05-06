@@ -1,0 +1,267 @@
+/* Project Details Styles */
+.project-details {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.project-header h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.project-content {
+  display: grid;
+  gap: 32px;
+}
+
+.description {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.description h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.description p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.members-section {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.members-section h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.members-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.member-card {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+.member-card p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.member-card p:first-child {
+  margin-top: 0;
+}
+
+.role {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role.admin {
+  background-color: #cc0000;
+  color: white;
+}
+
+.role.member {
+  background-color: #0066cc;
+  color: white;
+}
+
+.tasks-section {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tasks-header h2 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+.new-task-form {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.new-task-form input,
+.new-task-form textarea,
+.new-task-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.new-task-form input:focus,
+.new-task-form textarea:focus,
+.new-task-form select:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.new-task-form button {
+  padding: 10px 16px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.new-task-form button:hover {
+  background-color: #0052a3;
+}
+
+.tasks-list {
+  display: grid;
+  gap: 12px;
+}
+
+.task-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-left: 4px solid #999;
+  padding: 16px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.task-card.status-todo {
+  border-left-color: #999;
+}
+
+.task-card.status-in_progress {
+  border-left-color: #ffa500;
+}
+
+.task-card.status-completed {
+  border-left-color: #008060;
+  background-color: #f0fdf4;
+}
+
+.task-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.task-info h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.task-info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.task-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.priority {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.priority.low {
+  background-color: #ccf0e6;
+  color: #008060;
+}
+
+.priority.medium {
+  background-color: #ffe8cc;
+  color: #ff8c00;
+}
+
+.priority.high {
+  background-color: #fccccf;
+  color: #cc0000;
+}
+
+.due-date {
+  font-size: 12px;
+  color: #666;
+  padding: 4px 8px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-width: 200px;
+}
+
+.status-select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #0066cc;
+}
